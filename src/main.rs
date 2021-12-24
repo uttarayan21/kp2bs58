@@ -13,7 +13,7 @@ struct Args {
     verbose: bool,
 }
 
-pub fn print_verbose(keypair: impl AsRef<[u8]>) {
+fn print_verbose(keypair: impl AsRef<[u8]>) {
     // Keypair doesn't have std::fmt::Display
     let keypair =
         Keypair::from_bytes(keypair.as_ref()).expect("Unable to build a Keypair from data");
